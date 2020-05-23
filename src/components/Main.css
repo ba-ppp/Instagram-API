@@ -44,7 +44,7 @@
 }
 
 .icon {
-  width: 700px;
+  width: 800px;
 }
 .home {
   margin-left: 170px;
@@ -64,14 +64,11 @@
 }
 .mypro {
   border: 1px solid #ececec;
-  height: 25px;
-  width: 25px;
+  height: 32px;
+  width: 32px;
   border-radius: 19px;
   margin-top: -28px;
   margin-left: 360px;
-  background-image: url(/images/Myprofile.JPG);
-  background-position: center;
-  background-size: cover;
 }
 
 a {
@@ -81,4 +78,15 @@ a {
 
 a:visited {
   color: black !important;
+}
+
+.ant-avatar {
+  top: -8px !important;
+}
+
+.ant-avatar > img {
+  object-fit: contain !important;
+}
+.profile-av {
+  margin-left: 20px;
 }

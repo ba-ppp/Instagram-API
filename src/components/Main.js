@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Main.css";
-
+import { Avatar } from "antd";
 export default class Main extends Component {
   e;
   render() {
@@ -91,9 +91,11 @@ export default class Main extends Component {
                 </svg>
               </span>
             </a>
-            <a href="#">
-              <div class="mypro" />
-            </a>
+            <span className="profile-av">
+              <a href="/profile">
+                <Avatar src="https://raw.githubusercontent.com/ba-p/Instagram/master/images/735145cfe0a4.png" />
+              </a>
+            </span>
           </div>
         </div>
       </div>
