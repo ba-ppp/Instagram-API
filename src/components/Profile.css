@@ -1,0 +1,11 @@
+.profile {
+  text-align: center;
+  margin-top: 50px;
+}
+.ant-upload {
+  margin: 120px auto !important;
+}
+
+.ant-upload.ant-upload-select-picture-card {
+  float: unset !important;
+}
