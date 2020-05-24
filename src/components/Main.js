@@ -102,13 +102,13 @@ export default class Main extends Component {
               </span>
             </div>
           </div>
-          <Timeline />
-          <Switch>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
-          </Switch>
         </div>
+        <Timeline post={this.props.post} />
+        <Switch>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+        </Switch>
       </Router>
     );
   }

@@ -21,7 +21,7 @@ export default class App extends Component {
               <CreatePassword />
             </Route>
             <Route exact path="/">
-              <Main />
+              <Main post={this.props.post} />
             </Route>
           </Switch>
         </div>

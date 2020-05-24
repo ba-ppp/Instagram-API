@@ -1,6 +1,6 @@
 .main {
   background-color: #f8f8f8;
-  height: 8500px;
+  height: 8500px !important;
   width: 100%;
 }
 
