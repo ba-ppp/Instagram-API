@@ -7,6 +7,7 @@
   top: 80px;
   display: flex;
   background-color: white;
+  margin-bottom: -10px;
 }
 .avt {
   border: 1px solid #ececec;
@@ -34,10 +35,12 @@
 .compo-body {
   margin-left: 270px;
   border: 1px solid #e2dede;
-  margin-top: 80px;
+  margin-top: 90px;
   width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
 }
 
 .compo-end {

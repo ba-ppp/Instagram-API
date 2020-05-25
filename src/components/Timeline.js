@@ -36,12 +36,11 @@ export default class Timeline extends Component {
                   </svg>
                 </div>
               </div>
-              <img
+              <div
                 className="compo-body"
-                src={post.image}
-                alt=""
-                height="auto"
-                width="auto"
+                style={{
+                  backgroundImage: `url(${post.image})`
+                }}
               />
               <div className="compo-end">
                 <div className="icon-body">
