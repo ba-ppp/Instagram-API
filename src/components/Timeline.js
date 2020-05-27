@@ -4,13 +4,34 @@ import { Avatar } from "antd";
 import { Button } from "antd";
 import { HeartTwoTone } from "@ant-design/icons";
 export default class Timeline extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      like: false,
+      unlike: true,
+      post: this.props.post,
+      likeColor: "rgba(0, 0, 0, 0.65)"
+    };
+  }
+  handleScroll() {
+    console.log("hi");
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScrolled);
+  }
+  componentDidMount() {
+    window.addEventListener("mouseenter", this.handleScroll);
+    window.removeEventListener("mouseleave", this.handleScroll);
+  }
   render() {
     let posts = this.props.post;
+
     return (
       <div className="main">
-        {posts.map(function(post) {
+        {posts.map((post, index) => {
           return (
-            <div className="compo">
+            <div className="compo" key={index}>
               <div className="compo-head">
                 <Avatar className="avt" src={post.image} />
 
@@ -46,8 +67,24 @@ export default class Timeline extends Component {
                 <div className="icon-body">
                   <span className="heart-body">
                     <Button
-                      icon={<HeartTwoTone twoToneColor="rgba(0, 0, 0, 0.65)" />}
-                      onClick="(post.like += 1)"
+                      icon={
+                        <HeartTwoTone twoToneColor={this.state.likeColor} />
+                      }
+                      onClick={() => {
+                        if (this.state.like === true) {
+                          this.setState({
+                            unlike: true,
+                            like: false,
+                            likeColor: "rgba(0, 0, 0, 0.65)"
+                          });
+                        } else {
+                          this.setState({
+                            unlike: false,
+                            like: true,
+                            likeColor: "red"
+                          });
+                        }
+                      }}
                     />
                   </span>
                   <span className="comment-body">
@@ -105,7 +142,16 @@ export default class Timeline extends Component {
                     <a href="https://www.instagram.com/nhat_ha261">
                       <b>nhat_ha261</b>
                     </a>{" "}
-                    và <b>{post.like} người khác</b> đã thích
+                    {this.state.like && (
+                      <span>
+                        và<b> {post.like + 1} người khác </b> đã thích
+                      </span>
+                    )}
+                    {this.state.unlike && (
+                      <span>
+                        và<b> {post.like} người khác </b> đã thích
+                      </span>
+                    )}
                   </div>
                   <div className="count">
                     <a href="https://www.instagram.com/ngoctrinh89">

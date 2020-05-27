@@ -6,6 +6,7 @@ import CreatePassword from "./components/CreatePassword";
 import Main from "./components/Main";
 
 export default class App extends Component {
+  componentDidUpdate(prevProps) {}
   render() {
     return (
       <Router>

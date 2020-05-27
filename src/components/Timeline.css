@@ -9,6 +9,9 @@
   background-color: white;
   margin-bottom: -10px;
 }
+.compo {
+  margin-top: 10px;
+}
 .avt {
   border: 1px solid #ececec;
   height: 30px;
@@ -36,11 +39,12 @@
   margin-left: 270px;
   border: 1px solid #e2dede;
   margin-top: 90px;
+  margin-bottom: 0px;
   width: 600px;
   height: 600px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: contain;
 }
 
 .compo-end {
